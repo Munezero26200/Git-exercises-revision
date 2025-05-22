@@ -491,3 +491,277 @@ remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/Munezero26200/Git-exercises-revision.git
    d85acd9..addc1af  ft/service-redesign -> ft/service-redesign
    ```
+   ## Bundle3
+   ### Exercise1
+   ```bash
+   Documents/Git-exercises-revision (ft/team-
+page)
+$ git checkout main
+error: Your local changes to the following
+ files would be overwritten by checkout:  
+        ReadMe.md
+Please commit your changes or stash them b
+efore you switch branches.
+Aborting
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/
+Documents/Git-exercises-revision (ft/team-
+page)
+$ git add ReadMe.md
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/
+Documents/Git-exercises-revision (ft/team-
+page)
+$ git commit -m" Here is terminal history 
+of exercise2 bundle2"
+[ft/team-page d4e5b75]  Here is terminal h
+istory of exercise2 bundle2
+ 1 file changed, 5 insertions(+), 1 deleti
+on(-)
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/
+Documents/Git-exercises-revision (ft/team-
+page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2
+ commits.
+  (use "git push" to publish your local co
+mmits)
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/
+Documents/Git-exercises-revision (main)   
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/
+Documents/Git-exercises-revision (ft/conta
+ct-page)
+$ git checkout ft/team-page 
+Switched to branch 'ft/team-page'
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/
+Documents/Git-exercises-revision (ft/team-
+page)
+$ git log
+commit d4e5b75a52371c3a624d450734d336c17da7511b (HEAD -> ft/team-page)
+Author: Munezero26200 <alinemunezero920@gmail.com>
+Date:   Thu May 22 12:06:52 2025 +0200
+
+commit d4e5b75a52371c3a624d450734d336c17da
+7511b (HEAD -> ft/team-page)
+Author: Munezero26200 <alinemunezero920@gm
+ail.com>
+Date:   Thu May 22 12:06:52 2025 +0200    
+
+     Here is terminal history of exercise2
+ bundle2
+
+commit 5469f50f8f19cb7fc1a65b0656aebaad8e0
+9a427 (origin/ft/team-page)
+Author: Munezero26200 <alinemunezero920@gm
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page)
+$ git cherry-pick d4e5b75a52371c3a624d450734d336c17da7511b
+Auto-merging ReadMe.md
+CONFLICT (content): Merge conflict in ReadMe.md
+error: could not apply d4e5b75...  Here is terminal history of exercise2 bundle2
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+hint: Disable this message with "git config set advice.mergeConflict false"
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page|CHERRY-PICKING)
+$ git status
+On branch ft/contact-page
+You are currently cherry-picking commit d4e5b75.
+  (fix conflicts and run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   ReadMe.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page|CHERRY-PICKING)
+$
+ *  History restored 
+
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page|CHERRY-PICKING)cises-revision (ft/contact-page|CHERRY-PICKING)
+$ git add .
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page|CHERRY-PICKING)
+$ git commit -m"Here's the change"
+[ft/contact-page 65bf74c] Here's the change
+ Date: Thu May 22 12:06:52 2025 +0200      
+ 1 file changed, 428 insertions(+)
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.31 KiB | 1.65 MiB/s, done.   
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Munezero26200/Git-exercises-revision/pull/new/ft/contact-page
+remote:
+To https://github.com/Munezero26200/Git-exercises-revision.git
+ * [new branch]      ft/contact-page -> ft/contact-page     
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/contact-page)
+$ git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ touch faq.html
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ git add faq.html
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ git commit -m "This page contains the ideas, please feel f
+ree"
+[ft/faq-page b8534e6] This page contains the ideas, please feel free
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ git push origin ft/faq-page
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 3.82 KiB | 279.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Munezero26200/Git-exercises-revision/pull/new/ft/faq-page
+remote:
+To https://github.com/Munezero26200/Git-exercises-revision.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ get checkout ft/team-page
+bash: get: command not found
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ get checkout ft/team-page
+bash: get: command not found
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ get checkout ft/team-page
+bash: get: command not found
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ cv
+bash: cv: command not found
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/faq-page)
+$ git checkout  ft/team-page
+Switched to branch 'ft/team-page'
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/team-page)
+$ git log
+commit d4e5b75a52371c3a624d450734d336c17da7511b (HEAD -> ft/team-page)
+Author: Munezero26200 <alinemunezero920@gmail.com>
+Date:   Thu May 22 12:06:52 2025 +0200
+Revert " Here is terminal history of exercise2 bundle2"
+
+     Here is terminal history of exercise2 bundle2
+Date:   Thu May 22 12:03:27 2025 +0200
+                                                            eam-page)
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/team-page)
+$ git revert d4e5b75a52371c3a624d450734d336c17da7511b       
+[ft/team-page 53aadff] Revert " Here is terminal history of cises-revision (ft/team-page)
+exercise2 bundle2"
+ 1 file changed, 1 insertion(+), 5 deletions(-)             exercise2 bundle2"
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/team-page)                               cises-revision (ft/team-page)
+$ git push origin ft/team-page
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 578 bytes | 115.00 KiB/s, done.Total 4 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Munezero26200/Git-exercises-revision.git
+   5469f50..53aadff  ft/team-page -> ft/team-page
+   ```
