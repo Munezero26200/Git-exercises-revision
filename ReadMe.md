@@ -490,4 +490,3 @@ Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/Munezero26200/Git-exercises-revision.git
    d85acd9..addc1af  ft/service-redesign -> ft/service-redesign
-   ```
