@@ -1576,3 +1576,102 @@ remote:
 To https://github.com/Munezero26200/Git-exercises-revision.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+## Bundle5
+### Exercise2
+```bash
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/home-page-redesign|REBASE 1/2)ts/Documents/Git-exercises-revision (ftme-/home-page-redesign|REBASE 1/2)        
+$ git clone https://github.com/Munezero26200/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done 
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects:   9% (1/11remote: Compressing objects:  18% (2/11remote: Compressing objects:  27% (3/11remote: Compressing objects:  36% (4/11remote: Compressing objects:  45% (5/11remote: Compressing objects:  54% (6/11remote: Compressing objects:  63% (7/11remote: Compressing objects:  72% (8/11remote: Compressing objects:  81% (9/11remote: Compressing objects:  90% (10/1remote: Compressing objects: 100% (11/1remote: Compressing objects: 100% (11/11), done.
+Receiving objects:  58% (63/107), 1.28 
+Receiving objects:  59% (64/107), 1.28 
+Receiving objects:  60% (65/107), 1.28 
+Receiving objects:  61% (66/107), 1.28 
+Receiving objects:  62% (67/107), 1.28 
+Receiving objects:  63% (68/107), 1.28 
+Receiving objects:  64% (69/107), 1.28 
+Receiving objects:  65% (70/107), 1.28 
+Receiving objects:  66% (71/107), 1.28 
+Receiving objects:  67% (72/107), 1.28 
+Receiving objects:  68% (73/107), 1.28 
+Receiving objects:  69% (74/107), 1.28 
+Receiving objects:  70% (75/107), 1.28 
+Receiving objects:  71% (76/107), 1.28 
+Receiving objects:  72% (78/107), 1.28 
+Receiving objects:  73% (79/107), 1.28 
+Receiving objects:  74% (80/107), 1.28 
+Receiving objects:  75% (81/107), 1.28 
+Receiving objects:  76% (82/107), 1.28 
+Receiving objects:  77% (83/107), 1.28 
+Receiving objects:  78% (84/107), 1.28 
+Receiving objects:  79% (85/107), 1.28 
+Receiving objects:  80% (86/107), 1.28 
+Receiving objects:  81% (87/107), 1.28 
+Receiving objects:  82% (88/107), 1.28 
+Receiving objects:  83% (89/107), 1.28 
+Receiving objects:  84% (90/107), 1.28 
+Receiving objects:  85% (91/107), 1.28 
+Receiving objects:  86% (93/107), 1.28 
+Receiving objects:  87% (94/107), 1.28 
+Receiving objects:  88% (95/107), 1.28 
+Receiving objects:  89% (96/107), 1.28 
+Receiving objects:  90% (97/107), 1.28 
+Receiving objects:  91% (98/107), 1.28 
+Receiving objects:  92% (99/107), 1.28 
+Receiving objects:  93% (100/107), 1.28Receiving objects:  94% (101/107), 1.28Receiving objects:  95% (102/107), 1.28Receiving objects:  96% (103/107), 1.28remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects:  97% (104/107), 1.28Receiving objects:  98% (105/107), 1.28Receiving objects:  99% (106/107), 1.28Receiving objects: 1eiving objects:  98% (105/107), 1.28Receiv (107/107), 1.95 MiB | 2.90 MiB/s, done.ing objects:  99% (106/107), 1.28Receiving objects: 100% (107/107), 1.28Receiving objects: 100% (107/107), 1.95 MiB | 2.90 MiBDocuments/Git-exercises-revision (ft/home-page-redesign|REBASE 1/2)/s, done.
+Resolving deltas: 100% (5/5), done.       
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/home-page-redesign|REBASE 1/2)
+$ git add .
+warning: adding embedded git repository: git-cafe-exercise
+hint: You've added another git repository 
+inside your current repository.
+hint: Clones of the outer repository will 
+not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> git-cafe-exercise
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached git-cafe-exercise 
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"       
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/home-page-redesign|REBASE 1/2)
+$ git commit -m"Here's the change on index.html file"
+[ft/squashing a370935] Here's the change on index.html file
+ 2 files changed, 644 insertions(+), 1 deletion(-)
+ create mode 160000 git-cafe-exercise
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/home-page-redesign|REBASE 1/2)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Admin@DESKTOP-JJ9VPBQ MINGW64 ~/Documents/Documents/Git-exercises-revision (ft/home-page-redesign|REBASE 1/2)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.       
+Delta compression using up to 2 threads   
+Compressing objects: 100% (3/3), done.    
+Writing objects: 100% (3/3), 1.75 KiB | 224.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Munezero26200/Git-exercises-revision.git
+   aafe114..a370935  ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+```
